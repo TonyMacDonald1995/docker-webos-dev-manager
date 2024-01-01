@@ -17,5 +17,5 @@ jobs:
     - name: Push Docker image to Docker Hub
       run: |
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker build -t tonymacdonald1995/webos-dev-manager:${date +%s} -t tonymacdonald1995/webos-dev-mmanager:latest .
+        docker build -t tonymacdonald1995/webos-dev-mmanager:latest .
         docker push tonymacdonald1995/webos-dev-manager -a
