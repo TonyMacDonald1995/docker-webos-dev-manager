@@ -12,5 +12,6 @@ RUN apt-get install -y ./web-os-dev-manager_1.12.1_amd64.deb
 RUN apt-get clean && apt-get autoclean
 
 COPY startapp.sh /usr/local/bin/startapp
+RUN chmod +x /usr/local/bin/startapp
 
 CMD ["/usr/local/bin/startapp"]
